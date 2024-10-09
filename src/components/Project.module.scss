@@ -1,0 +1,59 @@
+.project {
+  display: flex;
+  flex-direction: row; /* Default layout for larger screens */
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+// .project:last-of-type {
+//   border-bottom: 1px solid rgba(133, 133, 133, 0.637);
+// }
+
+.project:hover {
+  opacity: 0.5;
+}
+
+.project:hover h2 {
+  transform: translateX(-10px);
+}
+
+.project:hover p {
+  transform: translateX(10px);
+}
+
+.project h2 {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 500;
+  transition: all 0.4s;
+  color: #afa18f;
+}
+
+.project p {
+  transition: all 0.4s;
+  font-weight: 400;
+  font-size: 18px;
+  color: #737c91;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column; /* Stack items vertically on mobile */
+    padding: 20px 15px; /* Reduced padding */
+    border: none; /* Remove border for mobile view */
+  }
+
+  .project h2 {
+    font-size: 30px; /* Adjust font size */
+  }
+
+  .project p {
+    font-size: 14px; /* Adjust font size */
+  }
+}

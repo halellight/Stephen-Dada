@@ -21,11 +21,13 @@ const MinimalistPage = () => {
 
       {/* Large Text Section */}
       <div className="text-center">
-        <h1 className="text-[350px] font-bold transform rotate-180">STEPHEN</h1>
+        <h1 className="lg:text-[350px] md:text-[200px] text-[110px] font-bold transform rotate-180">
+          STEPHEN
+        </h1>
       </div>
 
       {/* Footer Section */}
-      <footer className="text-center py-4">
+      <footer className="text-center py-4 text-[#ffffb9]">
         <p>©2024 Stephen, All Rights Reserved.</p>
       </footer>
     </div>

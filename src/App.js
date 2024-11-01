@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import MinimalistPage from "./components/MinimalistPage";
 import Tools from "./components/Tools";
 import Random from "./components/Random";
+import WorkMobile from "./components/WorkMobile";
 
 function App() {
   useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
           <AboutSection />
           <Random />
           <Pan />
+          <WorkMobile />
           {/* <Stack />
           <Page />
           <About />

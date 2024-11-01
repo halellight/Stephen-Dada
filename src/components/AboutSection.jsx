@@ -18,7 +18,7 @@ const AboutSection = () => {
         {/* Left Side - Heading */}
         <div className="text-left">
           <motion.h2
-            className="text-5xl font-bold"
+            className="lg:text-5xl font-bold md:text-[36px] text-[22px]"
             variants={slideUp}
             initial="closed"
             animate={isInView ? "open" : "closed"}
@@ -28,7 +28,10 @@ const AboutSection = () => {
         </div>
 
         {/* Right Side - Description */}
-        <div ref={description} className="text-gray-400 text-2xl">
+        <div
+          ref={description}
+          className="text-gray-400 lg:text-2xl md:text-[24px] text-[20px] "
+        >
           {/* First Paragraph with split words */}
           <p className="mb-6">
             Currently a software engineer at{" "}

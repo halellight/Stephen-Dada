@@ -1,6 +1,6 @@
 "use client";
 import styles from "./Pan.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Project from "./Project";
 import Modal from "./Modal";
 import img from "../images/1.jpeg";
@@ -32,24 +32,36 @@ const projects = [
 
 const Pan = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
+  const [isMobile, setIsMobile] = useState(window.innerwidth <= 768);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <main className={styles.main}>
-      <div className={styles.My}>MY WORK</div>
-      <div className={styles.body}>
-        {projects.map((project, index) => {
-          return (
-            <Project
-              index={index}
-              title={project.title}
-              setModal={setModal}
-              key={index}
-            />
-          );
-        })}
-      </div>
-      <Modal modal={modal} projects={projects} />
-    </main>
+    <div>
+      {!isMobile && (
+        <main className={styles.main}>
+          <div className={styles.My}>MY WORK</div>
+          <div className={styles.body}>
+            {projects.map((project, index) => {
+              return (
+                <Project
+                  index={index}
+                  title={project.title}
+                  setModal={setModal}
+                  key={index}
+                />
+              );
+            })}
+          </div>
+          <Modal modal={modal} projects={projects} />
+        </main>
+      )}
+    </div>
   );
 };
 export default Pan;

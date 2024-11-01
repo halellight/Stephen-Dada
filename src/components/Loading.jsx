@@ -57,7 +57,7 @@ export default function Index() {
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.5 },
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.4 },
     },
   };
 
@@ -72,7 +72,7 @@ export default function Index() {
         <>
           <motion.p variants={opacity} initial="initial" animate="enter">
             {words[index]}
-            <span className={styles.fullStop}>!</span>
+            <span className={styles.fullStop}>.</span>
           </motion.p>
           <svg>
             <motion.path
@@ -81,12 +81,6 @@ export default function Index() {
               exit="exit"
             ></motion.path>
           </svg>
-          <motion.div
-            className="absolute top-10 left-0 h-1 bg-[#00a699]"
-            initial={{ width: 0 }}
-            animate={{ width: `${words}%` }}
-            transition={{ duration: 0.05, ease: "easeInOut" }}
-          />
         </>
       )}
     </motion.div>

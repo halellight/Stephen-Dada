@@ -61,32 +61,34 @@ const Tools = () => {
   ];
 
   return (
-    <div ref={container} className="h-[300vh] relative">
-      <div className="sticky top-0 h-screen bg-[#000000] overflow-hidden ">
-        {pictures.map(({ src, rotateZ, opacity, top }, index) => (
-          <div
-            key={index}
-            className="w-full h-full flex items-center justify-center absolute -top-16 "
-          >
-            <div className="flex flex-col lg:grid-cols-2 justify-center items-center gap-5">
-              {index === 0 && (
-                <p className="text-[#afa18f] lg:text-[36px] md:text-[30px] text-[20px] font-bold">
-                  TOOLS
-                </p>
-              )}
+    <div ref={container} className="h-[300vh] relative ">
+      <div className="sticky top-0 h-screen bg-[#000000] overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full h-full">
+          {/* Left Side - Text */}
+          <div className="flex items-center justify-center">
+            <div className="flex flex-col gap-6">
+              <p className="text-[#afa18f] lg:text-[48px] md:text-[30px] text-[20px] font-bold">
+                TOOLS
+              </p>
+            </div>
+          </div>
+          {/* Right Side - Images */}
+          <div className="flex mt-10 items-center">
+            {pictures.map(({ src, rotateZ, opacity, top }, index) => (
               <motion.div
+                key={index}
                 style={{ rotateZ, opacity, top }}
-                className={`h-[20vh] relative mt-20 lg:h-[40vh] md:h-[40vh] ${iosClass}`}
+                className={`absolute h-[20vh] lg:h-[40vh] md:h-[20vh] w-[20vh] lg:w-[50vh] md:w-[30vh] ${iosClass}`}
               >
                 <img
                   src={src}
-                  alt={`imagine-${index}`}
+                  alt={`tool-${index}`}
                   className={`w-full h-full object-cover`}
                 />
               </motion.div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

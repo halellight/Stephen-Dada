@@ -56,26 +56,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full p-1 bg-[#000000] text-[#afa18f] flex justify-between items-center  z-50">
-      <div className="max-w-[1240px] mx-auto p-4 flex justify-between items-center gap-[100px] md:gap-[200px] lg:gap-[450px]">
+    <div className="fixed top-0 left-0 w-100vw p-1 bg-[#000000] text-[#ffffb9] flex justify-between items-center z-50">
+      <div className="w-[100vw] mx-auto lg:px-[350px] p-4 flex justify-between items-center space-x-2 ">
         <div className="flex items-center cursor-pointer">
-          <a href="landing" className="text-m md:text-l font-bold">
+          <a href="landing" className="text-m md:text-l lg:2xl font-bold">
             DADA STEPHEN
           </a>
         </div>
 
-        <div className="md:flex items-center space-x-4">
-          {/* <span className="p-2 text-gray-500 text-[10px] md:text-lg lg:text-xl ">
-            [ABJ]
-            <motion.span
-              animate={{ opacity: [1, 0.65, 1] }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-              className="text-[#00A699] font-bold text-[10px] md:text-lg lg:text-xl"
-            >
-              {formattedTime}
-            </motion.span>
-          </span> */}
-        </div>
         <>
           <div
             onClick={() => {

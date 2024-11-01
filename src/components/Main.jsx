@@ -27,7 +27,7 @@ const Main = () => {
 
   return (
     <div className="relative h-screen bg-[#000000] flex justify-center items-center overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap p-4 text-[#afa18f] lg:text-[128px] font-bold md:text-[82px] text-[64px] z-30">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap p-4 text-[#afa18f] lg:text-[128px] font-bold md:text-[82px] text-[60px] z-30">
         <div
           className="block "
           style={{
@@ -54,7 +54,7 @@ const Main = () => {
         <span
           className="block"
           style={{
-            transform: `translateX(50%) translateY(${parallaxOffset3}px)`,
+            transform: `translateX(30%) translateY(${parallaxOffset3}px)`,
           }}
         >
           Stephen

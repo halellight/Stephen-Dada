@@ -33,7 +33,7 @@ const Random = () => {
       <div className="max-w-[1100px] mx-auto">
         {/* Title with Animation */}
         <motion.h1
-          className="text-[48px] text-[#afa18f] font-bold mb-24"
+          className="text-[24px] lg:text-[48px] text-[#afa18f] font-bold lg:mb-24 mb-10 md:mb-18"
           variants={slideUp}
           initial="closed"
           animate={isInView ? "open" : "closed"}
@@ -54,14 +54,14 @@ const Random = () => {
               custom={index + 0.7} // Stagger animation
             >
               <motion.h2
-                className="text-2xl font-semibold text-[#ffffb9]"
+                className="lg:text-2xl text-[20px] font-semibold text-[#ffffb9]"
                 variants={slideUp}
                 custom={index + 0.7}
               >
                 {service.title}
               </motion.h2>
               <motion.p
-                className="text-gray-400 mt-6 text-2xl"
+                className="text-gray-400 mt-6 lg:text-2xl text-[18px]"
                 variants={slideUp}
                 custom={index + 1.5}
               >
